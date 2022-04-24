@@ -4,7 +4,7 @@
 $massas: #d73b3b;
 $carnes: #30201e;
 $combos: #e6c864;
-$veganos: #80aa40;
+$veganos: #628f1f;
 
 .item {
     display: flex;
@@ -76,19 +76,24 @@ $veganos: #80aa40;
         height: 40px;
         justify-content: center;
         padding: 10px 30px;
-        &__massas {
+
+        &.massas {
             background-color: $massas;
             color: white;
         }
-        &__carnes {
+
+        &.carnes {
             background-color: $carnes;
             color: white;
         }
-        &__combos {
+
+        &.combos {
             background-color: $combos;
         }
-        &__veganos {
+
+        &.veganos {
             background-color: $veganos;
+            color: white;
         }
     }
     .portion,
