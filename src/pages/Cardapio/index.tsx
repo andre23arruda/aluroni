@@ -7,6 +7,7 @@ import styles from './Cardapio.module.scss'
 import { ReactComponent as Logo} from 'assets/images/logo.svg'
 import Filters from './Filters'
 import Sorter from './Sorter'
+import Items from './Items'
 
 export default function Cardapio() {
 	const [search, setSearch] = useState('')
@@ -46,6 +47,7 @@ export default function Cardapio() {
 					/>
 				</div>
 
+				<Items />
 			</section>
 		</main>
 	)
