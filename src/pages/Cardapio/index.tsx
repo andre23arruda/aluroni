@@ -5,9 +5,11 @@ import Search from './Search'
 import styles from './Cardapio.module.scss'
 // import logo from 'assets/images/logo.svg'
 import { ReactComponent as Logo} from 'assets/images/logo.svg'
+import Filters from './Filters'
 
 export default function Cardapio() {
 	const [search, setSearch] = useState('')
+	const [selectedFilter, setSelectedFilter] = useState<number | null>(null)
 
 	return (
 		<main>
@@ -23,11 +25,19 @@ export default function Cardapio() {
 			</header>
 
 			<section>
-				<h3>Cardárpio</h3>
+				<h3 className={ styles.title }>Cardárpio</h3>
+
 				<Search
 					search={ search }
 					setSearch={ setSearch }
 				/>
+
+				<div className={ styles.filtersContainer }>
+					<Filters
+						selectedFilter={ selectedFilter }
+						setSelectedFilter={ setSelectedFilter }
+					/>
+				</div>
 			</section>
 		</main>
 	)
