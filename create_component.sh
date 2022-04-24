@@ -5,7 +5,10 @@ PWD=`pwd`
 if [[ ! -n $1 ]];
 	then
 		mkdir ./src/components/NewComponent
-		echo "export default function NewComponent() {
+		echo "import styles from './NewComponent.module.scss'
+import './NewComponent.css'
+
+export default function NewComponent() {
 	return (
 		<h1>Hello world</h1>
 	)
@@ -14,7 +17,10 @@ if [[ ! -n $1 ]];
 		touch ./src/components/NewComponent/NewComponent.module.css
 	else
 		mkdir ./src/components/$1
-		echo "export default function $1() {
+		echo "import styles from './$1.module.scss'
+import './$1.css'
+
+export default function $1() {
 	return (
 		<h1>Hello world</h1>
 	)

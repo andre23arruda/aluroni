@@ -13,6 +13,7 @@ export default function Search({ search, setSearch }: SearchProps) {
 	return (
 		<div className={ styles.buscador }>
 			<input
+				placeholder="Buscar..."
 				value={ search }
 				onChange={ e => setSearch(e.target.value) }
 			/>

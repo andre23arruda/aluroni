@@ -5,7 +5,10 @@ PWD=`pwd`
 if [[ ! -n $1 ]];
 	then
 		mkdir ./src/pages/NewPage
-		echo "export default function NewPage() {
+		echo "import styles from './NewPage.module.scss'
+import './NewPage.css'
+
+export default function NewPage() {
 	return (
 		<h1>Hello world</h1>
 	)
@@ -14,7 +17,10 @@ if [[ ! -n $1 ]];
 		touch ./src/pages/$1/NewPage.module.scss
 	else
 		mkdir ./src/pages/$1
-		echo "export default function $1() {
+		echo "import styles from './$1.module.scss'
+import './$1.css'
+
+export default function $1() {
 	return (
 		<h1>Hello world</h1>
 	)

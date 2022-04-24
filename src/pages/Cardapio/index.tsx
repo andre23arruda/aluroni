@@ -6,10 +6,12 @@ import styles from './Cardapio.module.scss'
 // import logo from 'assets/images/logo.svg'
 import { ReactComponent as Logo} from 'assets/images/logo.svg'
 import Filters from './Filters'
+import Sorter from './Sorter'
 
 export default function Cardapio() {
 	const [search, setSearch] = useState('')
 	const [selectedFilter, setSelectedFilter] = useState<number | null>(null)
+	const [selectedSort, setSelectedSort] = useState('')
 
 	return (
 		<main>
@@ -37,7 +39,13 @@ export default function Cardapio() {
 						selectedFilter={ selectedFilter }
 						setSelectedFilter={ setSelectedFilter }
 					/>
+
+					<Sorter
+						selectedSort={ selectedSort }
+						setSelectedSort={ setSelectedSort }
+					/>
 				</div>
+
 			</section>
 		</main>
 	)
