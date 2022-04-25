@@ -47,7 +47,11 @@ export default function Cardapio() {
 					/>
 				</div>
 
-				<Items />
+				<Items
+					selectedFilter={ selectedFilter }
+					selectedSort={ selectedSort }
+					search={ search }
+				/>
 			</section>
 		</main>
 	)
