@@ -15,39 +15,31 @@ export default function Cardapio() {
 	const [selectedSort, setSelectedSort] = useState('')
 
 	return (
-		<main>
-			<header className={ styles.header }>
-				<div className={ styles.text }>
-					A casa do código e da massa
-				</div>
-			</header>
+		<section>
+			<h3 className={ styles.title }>Cardárpio</h3>
 
-			<section>
-				<h3 className={ styles.title }>Cardárpio</h3>
+			<Search
+				search={ search }
+				setSearch={ setSearch }
+			/>
 
-				<Search
-					search={ search }
-					setSearch={ setSearch }
-				/>
-
-				<div className={ styles.filtersContainer }>
-					<Filters
-						selectedFilter={ selectedFilter }
-						setSelectedFilter={ setSelectedFilter }
-					/>
-
-					<Sorter
-						selectedSort={ selectedSort }
-						setSelectedSort={ setSelectedSort }
-					/>
-				</div>
-
-				<Items
+			<div className={ styles.filtersContainer }>
+				<Filters
 					selectedFilter={ selectedFilter }
-					selectedSort={ selectedSort }
-					search={ search }
+					setSelectedFilter={ setSelectedFilter }
 				/>
-			</section>
-		</main>
+
+				<Sorter
+					selectedSort={ selectedSort }
+					setSelectedSort={ setSelectedSort }
+				/>
+			</div>
+
+			<Items
+				selectedFilter={ selectedFilter }
+				selectedSort={ selectedSort }
+				search={ search }
+			/>
+		</section>
 	)
 }
