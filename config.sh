@@ -11,25 +11,21 @@ run () {
 	rm ./public/robots.txt
 
 	mkdir ./src/assets
+	mkdir ./src/data
+	mkdir ./src/pages
+	mkdir ./src/components
 
-	mkdir ./src/pages/Example
-	touch ./src/pages/Example/index.tsx
-	echo "export default function Example() {
-	return (
-		<h1>Hello world</h1>
-	)
-}" >> ./src/pages/Example/index.tsx
-	touch ./src/pages/Example/Example.css
-	touch ./src/pages/Example/Example.module.scss
+	yarn add normalize.css
+	yarn add react-router-dom
+	yarn add typescript-plugin-css-modules sass -D
 
-	mkdir ./src/components/Example
-	echo "export default function Example() {
-	return (
-		<h1>Hello world</h1>
-	)
-}" >> ./src/components/Example/index.tsx
-	touch ./src/components/Example/Example.css
-	touch ./src/components/Example/Example.module.scss
+	echo "import 'normalize.css'" >> ./src/index.tsx
+
+	printf "
+SUCCESS!!\n\n
+- Now remove comments in 'public/index.html' \n
+- And adjust 'src/index.tsx' \n\n
+"
 }
 
 run

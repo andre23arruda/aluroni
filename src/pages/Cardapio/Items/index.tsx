@@ -1,7 +1,7 @@
 import Item from './Item'
 
 import styles from './Items.module.scss'
-import items from './items.json'
+import items from 'data/cardapio.json'
 import { useState } from 'react'
 import { useEffect } from 'react'
 

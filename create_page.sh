@@ -14,7 +14,7 @@ export default function NewPage() {
 	)
 }" >>   ./src/pages/NewPage/index.tsx
 		touch ./src/pages/NewPage/NewPage.css
-		touch ./src/pages/$1/NewPage.module.scss
+		touch ./src/pages/NewPage.module.scss
 	else
 		mkdir ./src/pages/$1
 		echo "import styles from './$1.module.scss'

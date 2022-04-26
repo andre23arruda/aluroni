@@ -1,7 +1,7 @@
-import Cardapio from './pages/Cardapio'
+import AppRouter from 'routes'
 
 export default function App() {
     return (
-        <Cardapio />
+        <AppRouter />
     )
 }
