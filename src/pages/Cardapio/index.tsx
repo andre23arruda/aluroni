@@ -8,7 +8,6 @@ import Filters from './Filters'
 import Sorter from './Sorter'
 import Items from './Items'
 
-import Menu from 'components/Menu'
 
 export default function Cardapio() {
 	const [search, setSearch] = useState('')
@@ -17,8 +16,6 @@ export default function Cardapio() {
 
 	return (
 		<main>
-			<Menu />
-
 			<header className={ styles.header }>
 				<div className={ styles.text }>
 					A casa do código e da massa
