@@ -2,6 +2,7 @@
 @import 'assets/styles/breakpoints';
 
 .menu {
+    display: flex;
     padding: 20px $padding-horizontal;
     @media (max-width: $desktop_xsm) {
         padding: 20px $padding-horizontal-mobile;
@@ -11,5 +12,28 @@
     }
     @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
         padding: 20px $padding-horizontal-md;
+    }
+
+    ul {
+        align-items: center;
+        display: flex;
+
+        li {
+            list-style-type: none;
+            padding: 0 20px;
+
+            a {
+                color: $dark;
+                cursor: pointer;
+                font-size: 24px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: 0.2s ease;
+
+                &:hover {
+                    color: $dark-grey;
+                }
+            }
+        }
     }
 }
