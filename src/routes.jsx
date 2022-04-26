@@ -12,7 +12,6 @@ export default function  AppRouter() {
                 />
 
                 <Route
-                    exact
                     path="/cardapio"
                     element={ <Cardapio /> }
                 />

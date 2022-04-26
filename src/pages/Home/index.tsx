@@ -1,13 +1,15 @@
+import Menu from 'components/Menu';
 import items from 'data/cardapio.json'
 import styles from './Home.module.scss'
 
-// .sort(() => 0.5 - Math.random()).splice(0,3);
 
 export default function Home() {
 	let suggested = [...items].sort(() => 0.5 - Math.random()).splice(0,3);
 
 	return (
 		<section>
+			<Menu />
+
 			<h3 className={ styles.title }>
 				Recomendações da cozinha
 			</h3>
