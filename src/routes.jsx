@@ -11,10 +11,7 @@ export default function  AppRouter() {
                 <Menu />
 
                 <Routes>
-                    <Route
-                        path="/"
-                        element={ <DefaultPage /> }
-                    >
+                    <Route path="/" element={ <DefaultPage /> }>
                         <Route
                             index
                             element={ <Home /> }
@@ -25,7 +22,6 @@ export default function  AppRouter() {
                             element={ <Cardapio /> }
                         />
                     </Route>
-
                 </Routes>
             </BrowserRouter>
         </main>

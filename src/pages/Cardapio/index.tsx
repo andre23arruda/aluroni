@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Search from './Search'
 
+import theme from 'assets/styles/Theme.module.scss'
 import styles from './Cardapio.module.scss'
 // import logo from 'assets/images/logo.svg'
 import Filters from './Filters'
@@ -16,7 +17,7 @@ export default function Cardapio() {
 
 	return (
 		<section>
-			<h3 className={ styles.title }>Cardárpio</h3>
+			<h3 className={ theme.title }>Cardárpio</h3>
 
 			<Search
 				search={ search }

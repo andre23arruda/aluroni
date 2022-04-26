@@ -1,4 +1,5 @@
 import items from 'data/cardapio.json'
+import theme from 'assets/styles/Theme.module.scss'
 import styles from './Home.module.scss'
 
 
@@ -7,7 +8,7 @@ export default function Home() {
 
 	return (
 		<section>
-			<h3 className={ styles.title }>
+			<h3 className={ theme.title }>
 				Recomendações da cozinha
 			</h3>
 
