@@ -5,6 +5,7 @@ import About from 'pages/About'
 import Cardapio from 'pages/Cardapio'
 import Home from 'pages/Home'
 import NotFound from 'pages/NotFound'
+import Prato from 'pages/Prato'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function  AppRouter() {
@@ -28,6 +29,11 @@ export default function  AppRouter() {
                         <Route
                             path="sobre"
                             element={ <About /> }
+                        />
+
+                        <Route
+                            path="prato/:id"
+                            element={ <Prato /> }
                         />
 
                     </Route>

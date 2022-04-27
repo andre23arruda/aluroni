@@ -4,10 +4,17 @@ import styles from './Home.module.scss'
 
 import homeImage from 'assets/images/nossa_casa.png'
 
+import { useNavigate } from 'react-router-dom'
+
 
 export default function Home() {
 	let suggested = [...items].sort(() => 0.5 - Math.random()).splice(0,3)
 
+	const navigate = useNavigate()
+
+	function redirectToDetail(item: typeof items[0]){
+		navigate(`prato/${ item.id }`, { state: { item }})
+	}
 	return (
 		<section>
 			<h3 className={ theme.title }>
@@ -25,7 +32,7 @@ export default function Home() {
 							/>
 						</div>
 
-						<button>
+						<button onClick={ () => redirectToDetail(item) }>
 							Ver mais
 						</button>
 					</div>
