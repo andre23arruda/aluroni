@@ -5,6 +5,7 @@ import styles from './Home.module.scss'
 import homeImage from 'assets/images/nossa_casa.png'
 
 import { useNavigate } from 'react-router-dom'
+import { Prato } from 'types/Pratos'
 
 
 export default function Home() {
@@ -12,9 +13,10 @@ export default function Home() {
 
 	const navigate = useNavigate()
 
-	function redirectToDetail(item: typeof items[0]){
+	function redirectToDetail(item: Prato){
 		navigate(`prato/${ item.id }`, { state: { item }})
 	}
+
 	return (
 		<section>
 			<h3 className={ theme.title }>

@@ -30,13 +30,12 @@ export default function  AppRouter() {
                             path="sobre"
                             element={ <About /> }
                         />
-
-                        <Route
-                            path="prato/:id"
-                            element={ <Prato /> }
-                        />
-
                     </Route>
+
+                    <Route
+                        path="prato/:id"
+                        element={ <Prato /> }
+                    />
 
                     <Route path="*" element={ <NotFound /> } />
                 </Routes>
