@@ -16,7 +16,7 @@ export default function Cardapio() {
 	const [selectedSort, setSelectedSort] = useState('')
 
 	return (
-		<section>
+		<section className={ styles.cardapio }>
 			<h3 className={ theme.title }>Cardárpio</h3>
 
 			<Search

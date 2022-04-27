@@ -2,6 +2,8 @@ import items from 'data/cardapio.json'
 import theme from 'assets/styles/Theme.module.scss'
 import styles from './Home.module.scss'
 
+import homeImage from 'assets/images/nossa_casa.png'
+
 
 export default function Home() {
 	let suggested = [...items].sort(() => 0.5 - Math.random()).splice(0,3)
@@ -28,7 +30,21 @@ export default function Home() {
 						</button>
 					</div>
 				))}
+			</div>
 
+			<h3 className={ theme.title }>
+				Nossa casa
+			</h3>
+
+			<div className={ styles.locationContainer }>
+				<img src={ homeImage } alt="Nossa casa" />
+
+				<div className={ styles.adress }>
+					Rua Vergueiro, 3185
+					<br />
+					<br />
+					Vila Mariana - SP
+				</div>
 			</div>
 		</section>
 	)
